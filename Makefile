@@ -10,7 +10,7 @@ check: lint stan audit
 
 .PHONY: audit
 audit: ./node_modules ./package-lock.json
-	npm audit --audit-level info
+	npm audit --audit-level info --include prod --include dev --include peer --include optional
 
 .PHONY: stan
 stan: ./node_modules/.bin/tsc
@@ -30,7 +30,6 @@ fix: ./node_modules/.bin/prettier ./node_modules/.bin/eslint ./node_modules/.bin
 
 .PHONY: clean
 clean:
-	rm -f ./package-lock.json
 	rm -rf ./node_modules
 	rm -rf ./package-lock.json
 	rm -rf ./dist
@@ -55,7 +54,7 @@ transpile: ./node_modules/.bin/tsc ./node_modules/.bin/sass
 # Deploy / Release
 .PHONY: local
 local:
-	npm update --install-links
+	npm install --install-links --include prod --include dev --include peer --include optional
 	./node_modules/.bin/webpack-cli build --mode=development --node-env=development
 
 .PHONY: testing
@@ -66,7 +65,7 @@ development: testing
 
 .PHONY: staging
 staging:
-	npm update --install-links
+	npm install --install-links --include prod --include dev --include peer --include optional
 	./node_modules/.bin/webpack-cli build --mode=production --node-env=production
 
 .PHONY: production
@@ -74,4 +73,4 @@ production: staging
 
 # Dependencies
 ./node_modules ./package-lock.json ./node_modules/.bin/prettier ./node_modules/.bin/webpack-cli ./node_modules/.bin/svgo ./node_modules/.bin/eslint ./node_modules/.bin/stylelint ./node_modules/.bin/tsc:
-	npm update --install-links
+	npm install --install-links --include prod --include dev --include peer --include optional
