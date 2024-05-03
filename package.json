@@ -1,14 +1,14 @@
 {
-  "name": "@tomchochola/webpack-template",
+  "name": "@premierstacks/webpack-template",
   "description": "webpack template",
   "keywords": [
-    "tomchochola",
+    "premierstacks",
     "webpack-template"
   ],
-  "homepage": "https://github.com/tomchochola/webpack-template",
+  "homepage": "https://github.com/premierstacks/webpack-template",
   "bugs": {
     "email": "chocholatom1997@gmail.com",
-    "url": "https://github.com/tomchochola/webpack-template/issues"
+    "url": "https://github.com/premierstacks/webpack-template/issues"
   },
   "license": "SEE LICENSE IN ./LICENSE.md",
   "author": {
@@ -30,15 +30,15 @@
   "main": "./src/index.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tomchochola/webpack-template.git"
+    "url": "https://github.com/premierstacks/webpack-template.git"
   },
   "devDependencies": {
-    "@tomchochola/prettier-config": "github:tomchochola/prettier-config",
-    "@tomchochola/eslint-config": "github:tomchochola/eslint-config",
-    "@tomchochola/stylelint-config": "github:tomchochola/stylelint-config",
-    "@tomchochola/typescript-config": "github:tomchochola/typescript-config",
-    "@tomchochola/webpack-config": "github:tomchochola/webpack-config",
-    "@tomchochola/postcss-config": "github:tomchochola/postcss-config"
+    "@premierstacks/prettier-config": "github:premierstacks/prettier-config",
+    "@premierstacks/eslint-config": "github:premierstacks/eslint-config",
+    "@premierstacks/stylelint-config": "github:premierstacks/stylelint-config",
+    "@premierstacks/typescript-config": "github:premierstacks/typescript-config",
+    "@premierstacks/webpack-config": "github:premierstacks/webpack-config",
+    "@premierstacks/postcss-config": "github:premierstacks/postcss-config"
   },
   "private": true,
   "type": "module"
