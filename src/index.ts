@@ -16,4 +16,11 @@
  * - Sponsor & License: https://github.com/sponsors/tomchochola
  */
 
-export default {};
+import { Router, Routes } from './router';
+import Index from './routes';
+
+const routes: Routes = [{ path: '^/$', render: Index }];
+
+const router: Router = new Router(document.body, routes);
+
+router.handle();
