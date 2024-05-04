@@ -19,7 +19,7 @@
  */
 
 import { Router, Routes } from './router';
-import Index from './routes';
+import Index from './routes/Index';
 
 const routes: Routes = [{ path: '^/$', render: Index }];
 

@@ -1,7 +1,7 @@
 export default function Index(): HTMLElement {
-    const div = document.createElement('div');
+  const div = document.createElement('div');
 
-    div.innerHTML = 'Index';
+  div.innerHTML = 'Index';
 
-    return div;
-  }
+  return div;
+}
