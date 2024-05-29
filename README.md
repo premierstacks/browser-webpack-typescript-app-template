@@ -71,12 +71,12 @@ Review and ensure your license covers the usage of these dependencies, or remove
 
 The Webpack Template is meticulously designed to streamline the development of web applications by incorporating sophisticated tooling and configurations. This ensures a high-quality codebase and a seamless development experience from start to finish.
 
-- **Webpack Configuration**: Utilizes `@premierstacks/webpack-config` for a finely-tuned Webpack setup, facilitating the management and bundling of assets like HTML, SCSS, and TypeScript, optimized for both development and production environments.
-- **ESLint**: Integrates `@premierstacks/eslint-config` to enforce strict linting rules for JavaScript and TypeScript, promoting code quality and consistency throughout the project.
-- **Stylelint**: Employs `@premierstacks/stylelint-config` for CSS and SCSS linting, ensuring that styles across the project maintain high quality and consistency.
-- **Prettier**: Incorporates `@premierstacks/prettier-config` for unified code formatting, ensuring that all project code adheres to a consistent style for better readability and maintainability.
-- **TypeScript Support**: Configured with `@premierstacks/typescript-config` to leverage TypeScript's powerful features for type safety and developer productivity, aligning with TypeScript best practices.
-- **PostCSS Integration**: Set up with `@premierstacks/postcss-config` for advanced CSS processing capabilities, including autoprefixing and future CSS features, enhancing the styling workflow.
+- **Webpack Configuration**: Utilizes `@premierstacks/webpack-stack` for a finely-tuned Webpack setup, facilitating the management and bundling of assets like HTML, SCSS, and TypeScript, optimized for both development and production environments.
+- **ESLint**: Integrates `@premierstacks/eslint-stack` to enforce strict linting rules for JavaScript and TypeScript, promoting code quality and consistency throughout the project.
+- **Stylelint**: Employs `@premierstacks/stylelint-stack` for CSS and SCSS linting, ensuring that styles across the project maintain high quality and consistency.
+- **Prettier**: Incorporates `@premierstacks/prettier-stack` for unified code formatting, ensuring that all project code adheres to a consistent style for better readability and maintainability.
+- **TypeScript Support**: Configured with `@premierstacks/typescript-stack` to leverage TypeScript's powerful features for type safety and developer productivity, aligning with TypeScript best practices.
+- **PostCSS Integration**: Set up with `@premierstacks/postcss-stack` for advanced CSS processing capabilities, including autoprefixing and future CSS features, enhancing the styling workflow.
 - **Makefile Goals**: Features a comprehensive set of predefined Makefile commands, such as `make lint` for linting, `make fix` for automatic code corrections, `make transpile` for code compilation, and environment-specific commands like `make local`, `make testing`, `make development`, `make staging`, `make production`. These commands facilitate routine development tasks, contributing to an efficient workflow and streamlined CI/CD processes.
 - **Dotfiles**: Includes essential dotfiles (.gitignore, .editorconfig, .gitattributes, .prettierignore) to establish a standardized and efficient development environment across various platforms and editors, enhancing team collaboration and project integration.
 
