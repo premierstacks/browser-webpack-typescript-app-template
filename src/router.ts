@@ -1,13 +1,13 @@
-export type Render = () => HTMLElement;
+type Render = () => HTMLElement;
 
-export type Routes = Route[];
+type Routes = Route[];
 
-export interface Route {
+interface Route {
   path: string;
   render: Render;
 }
 
-export function Fallback(): HTMLElement {
+function Fallback(): HTMLElement {
   const div: HTMLElement = document.createElement('div');
 
   div.innerHTML = 'Fallback';
@@ -15,7 +15,7 @@ export function Fallback(): HTMLElement {
   return div;
 }
 
-export class Router {
+class Router {
   constructor(
     public mount: HTMLElement,
     public routes: Routes,
@@ -31,3 +31,5 @@ export class Router {
     this.mount.appendChild(route.render());
   }
 }
+
+export { Render, Routes, Route, Router, Fallback };
