@@ -17,13 +17,13 @@
  * - Web: https://premierstacks.com
  */
 
-import { configs } from '@premierstacks/webpack-stack';
+import { browserTs, chunks, html } from '@premierstacks/webpack-stack';
 
 export default function (env, argv) {
-  const config = configs.browserTs(env, argv, ['./src/index.ts', './src/index.scss']);
+  const config = browserTs(env, argv, ['./src/index.ts', './src/index.scss']);
 
-  configs.chunks(env, argv, config);
-  configs.html(env, argv, config, './src/index.html', 'index.html', true);
+  chunks(env, argv, config);
+  html(env, argv, config, './src/index.html', 'index.html', true);
 
   return config;
 }
