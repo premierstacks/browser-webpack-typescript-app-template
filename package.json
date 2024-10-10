@@ -2,9 +2,9 @@
   "name": "@premierstacks/browser-webpack-typescript-app-template",
   "description": "premierstacks browser webpack typescript app template",
   "keywords": [
+    "tomchochola",
     "premierstacks",
-    "browser-webpack-typescript-app-template",
-    "tomchochola"
+    "browser-webpack-typescript-app-template"
   ],
   "homepage": "https://github.com/premierstacks/browser-webpack-typescript-app-template",
   "bugs": {
@@ -38,7 +38,8 @@
     "@premierstacks/prettier-stack": "github:premierstacks/prettier-stack",
     "@premierstacks/stylelint-stack": "github:premierstacks/stylelint-stack",
     "@premierstacks/typescript-stack": "github:premierstacks/typescript-stack",
-    "@premierstacks/webpack-stack": "github:premierstacks/webpack-stack"
+    "@premierstacks/webpack-stack": "github:premierstacks/webpack-stack",
+    "svgo": "^3.3"
   },
   "private": true,
   "type": "module"
