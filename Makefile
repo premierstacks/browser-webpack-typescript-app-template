@@ -5,7 +5,7 @@ SHELL := /bin/bash
 .DEFAULT_GOAL := never
 
 # Variables
-SOURCES = $(shell find . -maxdepth 1 -type f) $(shell find ./src ./assets ./public -type f)
+SOURCES = $(shell rg --files --hidden --iglob '!.git')
 NODE_ENV ?= production
 
 # Goals
@@ -28,13 +28,14 @@ commit: tree fix fix fix check compress
 .PHONY: compress
 compress: ./node_modules/svgo_stamp
 
-./node_modules/svgo_stamp: ./node_modules/.bin/svgo $(shell find ./src ./assets ./public -type f -iname '*.svg')
-	find ./src ./assets ./public -type f -iname '*.svg' -exec ./node_modules/.bin/svgo --multipass --eol=lf --indent=2 --final-newline -i {} \;
+./node_modules/svgo_stamp: ./node_modules/.bin/svgo $(shell rg --files --hidden --iglob '!.git' --iglob '*.svg')
+	rg --files --hidden --iglob '!.git' --iglob '*.svg' | xargs -n 1 -P 0 ./node_modules/.bin/svgo --multipass --eol=lf --indent=2 --final-newline
 	touch ./node_modules/svgo_stamp
 
 .PHONY: clean
 clean:
-	rm -rf ./node_modules ./dist
+	rm -rf ./node_modules
+	rm -rf ./dist
 	git clean -Xfd
 
 .PHONY: development
@@ -113,7 +114,7 @@ server: start
 
 .PHONY: start
 start: NODE_ENV = development
-start: ./node_modules/.bin/webpack
+start: ./node_modules/.bin/webpack-cli ./webpack.config.js
 	./node_modules/.bin/webpack-cli serve --mode=${NODE_ENV} --node-env=${NODE_ENV}
 
 .PHONY: testing
@@ -121,27 +122,29 @@ testing: NODE_ENV = development
 testing: ./dist
 
 .PHONY: tree
-tree: clean
+tree: ./README.md
 	sed -i '/## Tree/,$$d' README.md
 	echo '## Tree' >> README.md
 	echo '' >> README.md
 	echo 'The following is a breakdown of the folder and file structure within this repository. It provides an overview of how the code is organized and where to find key components.' >> README.md
 	echo '' >> README.md
 	echo '```bash' >> README.md
-	tree >> README.md
+	rg --files --hidden --iglob '!.git' | tree --fromfile >> README.md
 	echo '```' >> README.md
 
 .PHONY: update
 update: update_npm
 
 .PHONY: update_npm
-update_npm: package.json
+update_npm: ./package.json
+	rm -rf ./node_modules
 	npm update --install-links --include prod --include dev --include peer --include optional
 
-./dist: ./node_modules/.bin/webpack-cli ${SOURCES}
+./dist: ./node_modules/.bin/webpack-cli ./webpack.config.js ${SOURCES}
+	rm -rf ./dist
 	./node_modules/.bin/webpack-cli build --mode=${NODE_ENV} --node-env=${NODE_ENV}
-	touch ./dist
 
 # Dependencies
-./package-lock.json ./node_modules ./node_modules/.bin/eslint ./node_modules/.bin/prettier ./node_modules/.bin/webpack-cli: package.json
+./package-lock.json ./node_modules ./node_modules/.bin/eslint ./node_modules/.bin/prettier ./node_modules/.bin/webpack-cli ./node_modules/.bin/svgo ./node_modules/.bin/tsc: ./package.json
+	rm -rf ./node_modules
 	npm install --install-links --include prod --include dev --include peer --include optional

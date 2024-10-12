@@ -68,54 +68,6 @@ For full licensing terms, refer to the LICENSE.md file accompanying this softwar
 
 **See full terms here: [/LICENSE.md](/LICENSE.md)**
 
-## Preconfigured Features
-
-This template includes the following features:
-
-**1. [https://github.com/premierstacks/webpack-stack](https://github.com/premierstacks/webpack-stack)**
-
-webpack template, [/webpack.config.js](/webpack.config.js)
-
-**2. [https://github.com/premierstacks/typescript-stack](https://github.com/premierstacks/typescript-stack)**
-
-typescript template, [/tsconfig.json](/tsconfig.json)
-
-**3. [https://github.com/premierstacks/prettier-stack](https://github.com/premierstacks/prettier-stack)**
-
-prettier template, [/prettier.config.js](/prettier.config.js), [/.prettierignore](/.prettierignore)
-
-**4. [https://github.com/premierstacks/eslint-stack](https://github.com/premierstacks/eslint-stack)**
-
-eslint template, [/eslint.config.js](/eslint.config.js)
-
-**5. [https://github.com/premierstacks/postcss-stack](https://github.com/premierstacks/postcss-stack)**
-
-postcss template, [/postcss.config.js](/postcss.config.js)
-
-**6. [https://github.com/premierstacks/stylelint-stack](https://github.com/premierstacks/stylelint-stack)**
-
-stylelint template, [/stylelint.config.js](/stylelint.config.js), [/.stylelintignore](/.stylelintignore)
-
-**7. dot files**
-
-[/.editorconfig](/.editorconfig), [/.gitignore](/.gitignore), [/.gitattributes](/.gitattributes), [/.browserslistrc](/.browserslistrc)
-
-**8. Makefile**
-
-CLI commands implemented in using make, [/Makefile](/Makefile)
-
-**9. NPM**
-
-node package manager, [/package.json](/package.json)
-
-**10. assets optimization**
-
-make compress
-
-**11. base HTML setup**
-
-[/src/index.html](/src/index.html), [/src/index.scss](/src/index.scss), [/src/index.ts](/src/index.ts), [/public/robots.txt](/public/robots.txt), [/assets/favicon.ico](/assets/favicon.ico)
-
 ## Getting Started
 
 **1. Review the documentation and license**
@@ -210,6 +162,12 @@ The following is a breakdown of the folder and file structure within this reposi
 
 ```bash
 .
+├── .browserslistrc
+├── .editorconfig
+├── .gitattributes
+├── .gitignore
+├── .prettierignore
+├── .stylelintignore
 ├── AUTHORS.md
 ├── LICENSE.md
 ├── Makefile
@@ -231,5 +189,5 @@ The following is a breakdown of the folder and file structure within this reposi
 ├── tsconfig.json
 └── webpack.config.js
 
-3 directories, 17 files
+3 directories, 23 files
 ```
