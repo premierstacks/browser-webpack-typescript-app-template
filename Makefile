@@ -26,6 +26,7 @@ compress: ./node_modules/.bin/svgo $(shell rg --files --hidden --iglob '!.git' -
 clean:
 	rm -rf ./node_modules
 	rm -rf ./package-lock.json
+	rm -rf ./dist
 
 .PHONY: development
 development: local
