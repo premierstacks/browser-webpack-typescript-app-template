@@ -1,3 +1,3 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.innerHTML = 'DOMContentLoaded';
+  document.body.innerHTML = 'Premierstacks';
 });
