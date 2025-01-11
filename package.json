@@ -3,6 +3,7 @@
   "description": "premierstacks browser webpack typescript app template",
   "keywords": [
     "tomchochola",
+    "tomaschochola",
     "premierstacks",
     "browser-webpack-typescript-app-template"
   ],
@@ -11,7 +12,7 @@
     "email": "chocholatom1997@gmail.com",
     "url": "https://github.com/premierstacks/browser-webpack-typescript-app-template/issues"
   },
-  "license": "SEE LICENSE IN ./LICENSE.md",
+  "license": "CC-BY-ND-4.0",
   "author": {
     "email": "chocholatom1997@gmail.com",
     "name": "Tomáš Chochola",
@@ -28,10 +29,7 @@
     "type": "github",
     "url": "https://github.com/sponsors/tomchochola"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/premierstacks/browser-webpack-typescript-app-template.git"
-  },
+  "repository": "github:premierstacks/browser-webpack-typescript-app-template",
   "devDependencies": {
     "@premierstacks/eslint-stack": "github:premierstacks/eslint-stack",
     "@premierstacks/postcss-stack": "github:premierstacks/postcss-stack",
@@ -39,7 +37,7 @@
     "@premierstacks/stylelint-stack": "github:premierstacks/stylelint-stack",
     "@premierstacks/typescript-stack": "github:premierstacks/typescript-stack",
     "@premierstacks/webpack-stack": "github:premierstacks/webpack-stack",
-    "svgo": "^3.3"
+    "sanitize.css": "^13.0.0"
   },
   "private": true,
   "type": "module"
