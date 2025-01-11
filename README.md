@@ -109,9 +109,6 @@ make check
 
 # clean up the project
 make clean
-
-# run before every commit
-make commit
 ```
 
 ## Contact

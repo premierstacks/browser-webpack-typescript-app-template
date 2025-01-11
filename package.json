@@ -37,7 +37,7 @@
     "@premierstacks/stylelint-stack": "github:premierstacks/stylelint-stack",
     "@premierstacks/typescript-stack": "github:premierstacks/typescript-stack",
     "@premierstacks/webpack-stack": "github:premierstacks/webpack-stack",
-    "sanitize.css": "^13.0.0"
+    "sanitize.css": "^13.0"
   },
   "private": true,
   "type": "module"

@@ -21,9 +21,6 @@ clean:
 	rm -rf ./package-lock.json
 	rm -rf ./dist
 
-.PHONY: commit
-commit: fix check compress
-
 .PHONY: development
 development: local
 
